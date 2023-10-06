@@ -1,0 +1,40 @@
+//MEDIAS 
+  //Breakpoints and media queries:
+  $breakpoints: (
+    250 : 250px,
+    iphone: 415px,//this is not exactly an iphone meassure, it is aproximated
+    540 : 540px,
+    648 : 648px, 
+    670 : 670px,  
+    768 : 768px,
+    800 : 800px,
+    ipad: 810px, 
+    845 : 845px,  
+    974 : 974px,
+    1024 : 1024px,   
+    1050 : 1050px,
+    1155: 1155px,
+    1229: 1229px,
+    1331 : 1331px,
+    1437 : 1437px,
+    1540: 1540px,
+    1594: 1594px,
+    1659 : 1659px
+  );
+
+
+/*Styles just applied to screens width equal o higher than 768px (md) */
+@mixin media-up($breakpoint){
+  @media only screen and (min-width: map-get($breakpoints, $breakpoint)){
+    @content;
+  };
+}
+
+
+/* Styles just applied to screens width equal o higher than 540px (sm) */
+@mixin media-down($breakpoint){
+  @media only screen and (max-width: map-get($breakpoints, $breakpoint)){
+    @content;
+  };    
+
+}

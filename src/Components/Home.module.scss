@@ -1,0 +1,45 @@
+@import '../Variables.scss';
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  place-items: center;
+  color: white;
+  justify-content: center;
+  margin: auto;
+  width: 85%;
+  height:auto;
+  text-align: center;
+  gap: 1rem;
+  font-size: 8px;
+
+
+  @include media-down(1437) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+  }
+
+  @include media-down(1229) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+  }
+
+  @include media-down(974) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+     
+  }
+
+  @include media-down(648) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(5, 1fr);           
+
+  } 
+}
+
+
+   
+
+
